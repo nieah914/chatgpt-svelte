@@ -53,7 +53,7 @@ export const POST: RequestHandler = async ({ request }) => {
     }
 
     const prompt =
-      'You are a virtual assistant for a company called Huntabyte. Your name is Axel Smith';
+      'You are a virtual assistant for a company called Hunet. Your name is HuChat';
     tokenCount += getTokens(prompt);
 
     if (tokenCount >= 4000) {
@@ -72,6 +72,10 @@ export const POST: RequestHandler = async ({ request }) => {
       stream: true
     };
 
+    // Need to implement {previous message history} send it as a in-context information with current question as a prompt.
+    // previous message history can be implemented by append {question and answer}.
+    // Whenever
+    // https://medium.com/mlearning-ai/using-chatgpt-api-to-ask-contextual-questions-within-your-application-a80b6a76da98
     const chatResponse = await fetch('https://api.openai.com/v1/chat/completions', {
       headers: {
         Authorization: `Bearer ${OPENAI_KEY}`,
@@ -96,3 +100,4 @@ export const POST: RequestHandler = async ({ request }) => {
     return json({ error: 'There was an error processing your request' }, { status: 500 });
   }
 };
+

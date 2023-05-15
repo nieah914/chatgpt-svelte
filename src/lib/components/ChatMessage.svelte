@@ -13,7 +13,7 @@
   let scrollToDiv: HTMLDivElement;
 
   const classSet = {
-    user: 'justify-end text-rose-700',
+    user: 'justify-end text-amber-400',
     assistant: 'justify-start text-teal-400',
     system: 'justify-center text-gray-400'
   };
@@ -35,7 +35,7 @@
   <p class="text-xs px-2">{type === 'user' ? 'Me' : 'Bot'}</p>
 </div>
 
-<div class="flex {classSet[type]}">
+<div class="flex {classSet[type]}" >
   <div
     use:typeEffect={message}
     class="bg-black py-0.5 px-4 max-w-2xl rounded leading-loose {classes} {classSet[type]}"

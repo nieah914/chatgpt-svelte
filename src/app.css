@@ -20,13 +20,11 @@ code {
 	color: rgb(190 18 60 / var(--tw-text-opacity));
 	border-radius: 0.25rem;
 	padding: 0 0.5rem;
-
-
 }
 
 body {
 	color: white;
-	background-color: #131416;
+	background-color: #4a4a4a;
 }
 
 ol {
@@ -36,4 +34,8 @@ ol {
 
 ol > li {
 	margin: 1rem 0;
+}
+
+table {
+	table-layout: fixed;
 }
